@@ -17,14 +17,15 @@
 # -109 <= target <= 109
 # Only one valid answer exists.
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+class Solution:
+    def two_sum(self, inputs, target):
+        for i in range(len(inputs)):
+            for j in range(i+1, len(inputs)):
+                if inputs[i] + inputs[j] == target:
+                    return i, j
 
-def two_sum(inputs, target):
-    for i in range(len(inputs)):
-        for j in range(len(inputs)):
-            if inputs[i] + inputs [j] == target:
-                return i,j
-            else:
-                print("such a numbers doesnt exist")
-inputs = [10,24,11,9]
+
+inputs = [10, 24, 11, 9]
 target = 19
-print(two_sum(inputs,target))
+solution = Solution()
+print(solution.two_sum(inputs, target))
